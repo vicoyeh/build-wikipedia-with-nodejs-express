@@ -1,0 +1,11 @@
+.main {
+	position: relative;
+	top:50px;
+	left:50%;
+	width:500px;
+	margin-bottom:100px;
+}
+
+.main h1 {
+	margin-left:-150px;
+}

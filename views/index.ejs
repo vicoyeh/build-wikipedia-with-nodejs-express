@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Wikipedia</title>
+<!--CSS BEGIN-->
+<link href='bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='css/index.css' rel='stylesheet' type='text/css'>
+<!--CSS END-->
+<!--JS BEGIN-->
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+<!--JS END-->
+</head>
+
+<body>
+<section class="main">
+	<img src="http://fontmeme.com/newcreate.php?text=WikipediA&name=LinLibertineC_Re-4.0_.1_.ttf&size=37&style_color=000000" alt="Wikipedia Logo" class="logo" >
+
+	<div class="inner"> 
+		<img src="img/background.png" width="270px" height="270px">
+		<a href="/page"><div class="btn btn-default enter-btn"><strong>Main Page</strong></div></a>
+	</div>
+</section>
+
+<footer>
+	<hr></hr>
+	ACM Teach Winter '15 by Vic Yeh
+</footer>
+
+<script>
+$(document).ready(function(){
+	$(window).resize(function(){
+		if ($(window).height()>600){
+			$('footer').fadeIn();
+		}
+		if ($(window).height()<600) {
+			$('footer').fadeOut();
+		}
+	});
+});
+</script>
+</body>
+
+</html>

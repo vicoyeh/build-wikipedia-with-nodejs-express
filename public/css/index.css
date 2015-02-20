@@ -1,0 +1,26 @@
+.main {
+	position:absolute;
+	left:50%;
+	margin-left:-100px;
+	top:130px;
+}
+
+.inner {
+	position:relative;
+	top:20px;
+	left:-10px;
+}
+
+.enter-btn {
+	position:relative;
+	top:175px;
+	left:-190px;
+}
+
+footer {
+	position:absolute;
+	bottom:0;
+	left:50%;
+	margin-left:-70px;
+	margin-bottom:5px;
+}
