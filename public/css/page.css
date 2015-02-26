@@ -198,7 +198,7 @@ a:visited{
 }
 
 .content .contents {
-	width:210px;
+	width:210px;	
 	position: relative;
 	float:left;
 	border:1px solid #888;
@@ -218,6 +218,7 @@ p.center {
 .profile .info {
 	margin-left:10px;
 	margin-top:-4px;
+
 }
 
 .info-key {
@@ -254,6 +255,7 @@ p.center {
 .part {
 	padding-top:2px;
 	clear:left;
+	min-width:900px !important;
 }
 
 .part .topic {

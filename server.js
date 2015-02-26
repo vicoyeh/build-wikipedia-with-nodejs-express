@@ -32,6 +32,13 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
 
+// CONFIG
+// ==========================================
+var dbConfig = require('./config/db');
+var mongoose = require('mongoose');
+//Connect to DB
+mongoose.connect(dbConfig.url);
+
 // SET
 // ==========================================
 // app.set(name, value)

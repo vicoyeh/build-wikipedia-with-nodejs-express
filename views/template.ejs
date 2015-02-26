@@ -4,18 +4,18 @@
 <head>
 <title>Vic Yeh - Wikipedia, the free encyclopedia</title>
 <!--CSS BEGIN-->
-<link href='css/page.css' rel='stylesheet' type='text/css'>
+<link href='/css/page.css' rel='stylesheet' type='text/css'>
 <!--CSS END-->
 <!--JS BEGIN-->
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
-<script type="text/javascript" src="js/page.js" ></script>
+<script type="text/javascript" src="/js/page.js" ></script>
 <!--JS END-->
 </head>
 
 <body>
 <!--LOGO SECTION-->
 <div class="logo-section">
-	<a href="index.html"><img src="../img/background-trans.png" width="110" height="110"></a>
+	<a href="index.html"><img src="/img/background-trans.png" width="110" height="110"></a>
 	<img src="http://fontmeme.com/newcreate.php?text=WikipediA&name=LinLibertineC_Re-4.0_.1_.ttf&size=20&style_color=000000" alt="Wikipedia Logo" class="logo-desc" >
 </div>
 
@@ -23,8 +23,8 @@
 <!--ACCOUNT LOGIN ON THE TOP RIGHT-->
 <div class="headline">
 	<div class="login-btn">
-		<img src="img/login-icon.png" class="icon" >
-		<a href="/account"><span class="login">New Page</span></a>
+		<img src="/img/login-icon.png" class="icon" >
+		<a href="/new"><span class="login">New Page</span></a>
 	</div>
 </div>
 
@@ -78,7 +78,7 @@
 <!--MAIN SECTION BEGIN-->
 <sectoon class="right main">
 	<div class="content">
-		<span class="title">Vic Yeh</span>
+		<span class="title"><%= page.content.name %></span>
 
 		<div class="share-section">
 			<input class="search-input" placeholder="Search">
@@ -89,31 +89,31 @@
 		<p class="caption">From Wikipedia, the free encyclopedia</p>
 
 		<div class="profile">
-			<p class="username center">Vic Yeh</p>
-			<p class="center"><img src="img/default.jpg" width="200" height="200"></p>
+			<p class="username center"><%= page.content.name %></p>
+			<p class="center"><img src="/img/default.jpg" width="200" height="200"></p>
 			<div class="info">
 				<span class="info-key">Major</span>
 				<ul class="info-value" >
-					<li>Computer Science</li>					
+					<li><%= page.content.major %></li>					
 				</ul>
 			</div>			
 			<div class="info">
 				<span class="info-key">Alma Mater</span>
 				<ul class="info-value" >
-					<li>University of California, Los Angeles</li>					
+					<li><%= page.content.school %></li>					
 				</ul>
 			</div>	
 			<div class="info">
 				<span class="info-key">Interests</span>
 				<ul class="info-value" >
-					<li>watch YouTube</li>	
-					<li>play 2k15</li>
-					<li>procrastinate</li>						
+					<% for (i=0;i< page.content.interests.length;i++) { %>
+						<li><%= page.content.interests[i] %></li>	
+					<% } %>
 				</ul>
 			</div>	
 		</div>
 
-		<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p class="summary"><%= page.content.summary %></p>
 
 		<div class="contents">
 			<p class="contents-title center">Contents</p>
@@ -127,19 +127,19 @@
 		<div class="part" id="personal-life">
 			<p class="topic">Personal Life</p>
 			<hr></hr>
-			<p class="part-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="part-content"><%= page.content.life %></p>
 		</div>
 
 		<div class="part" id="accomplishments">
 			<p class="topic">Accomplishments</p>
 			<hr></hr>
-			<p class="part-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="part-content"><%= page.content.accomplishments %></p>
 		</div>
 
 		<div class="part" id="references">
 			<p class="topic">References</p>
 			<hr></hr>
-			<p class="part-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="part-content"><%= page.content.references %></p>
 		</div>
 
 	</div>
